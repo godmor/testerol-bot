@@ -4,6 +4,7 @@ import os
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.fsm.storage.memory import MemoryStorage   # ← добавить эту строку!
 
 TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_ID = int(os.getenv("ADMIN_ID"))
