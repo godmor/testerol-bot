@@ -1,13 +1,14 @@
 import asyncio
 import logging
+import os
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.fsm.storage.memory import MemoryStorage
 
-# ← ТВОИ ДАННЫЕ СЮДА →
-TOKEN = "8755561572:AAH-S7K1fGMC-x83rDx3yW2BgTxPB1CsaMM"  # 1234567890:ABCdef...
-ADMIN_ID = 7855432801                # Твой ID от @userinfobot
+# Токен и ID берем из переменных окружения
+TOKEN = os.getenv("8755561572:AAH-S7K1fGMC-x83rDx3yW2BgTxPB1CsaMM")
+ADMIN_ID = int(os.getenv("7855432801"))
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
