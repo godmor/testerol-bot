@@ -6,9 +6,9 @@ from aiogram.filters import Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.fsm.storage.memory import MemoryStorage
 
-# Токен и ID берем из переменных окружения
-TOKEN = os.getenv("8755561572:AAH-S7K1fGMC-x83rDx3yW2BgTxPB1CsaMM")
-ADMIN_ID = int(os.getenv("7855432801"))
+# Имя переменных окружения
+TOKEN = os.getenv("BOT_TOKEN")  # ← именно "BOT_TOKEN", а не токен
+ADMIN_ID = int(os.getenv("ADMIN_ID"))  # ← именно "ADMIN_ID"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
