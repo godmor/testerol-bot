@@ -34,7 +34,7 @@ async def help_cmd(message: types.Message):
     await message.answer(text)
 
 @dp.message(Command("leads"))
-async def leads_cmd(message: types.Messae):
+async def leads_cmd(message: types.Message):
     text = (
         "📊 Найденные лиды:\n"
         "• +7(900)123-45-67 (ЕКБ, курьер)\n"
